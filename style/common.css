@@ -1,0 +1,23 @@
+ .header {
+            min-height: 30px;
+            background-color: rgb(86, 14, 14);
+            display: flex;
+
+
+
+        }
+
+        body {
+            margin: 0;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .footer {
+            height: 50px;
+            background-color: rgb(86, 14, 14);
+            
+        }
+        a{
+            text-decoration-line: none;
+        }

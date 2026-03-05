@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .card {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .card img,
+        .card div {
+
+            max-width: 200px;
+
+        }
+
+        .card div {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 200px;
+            height: -webkit-fill-available;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.473);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition-duration: 0.5s;
+            opacity: 0;
+        }
+
+        button:has(>.card) {
+            height: -webkit-fill-available;
+
+
+        }
+
+        .card:hover div {
+            opacity: 1;
+            transition-duration: 0.5s;
+
+        }
+
+        .card span {
+            color: white;
+            text-transform: capitalize;
+        }
+    </style>
+    <link rel="stylesheet" href="./style/common.css">
+
+    <style>
+        .testata {
+            background-image: url(immagini/sicilia.jpg);
+            width: 100%;
+            max-height: 500px;
+            background-repeat: no-repeat;
+            min-height: 300px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        .testata>div {
+            height: -webkit-fill-available;
+            width: 100%;
+            backdrop-filter: blur(2px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .testata h1 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <script>
+            function vaiAllaPiazza(piazzaId){
+                window.location.href="./piazza.html?provincia="+piazzaId
+            }
+        </script>
+</head>
+
+<body class="d-flex flex-column ">
+    <div class="header">
+        <div>
+           <a href="/"> <h3 class="m-0 "
+                style="text-transform: uppercase; color:white; font-family: Arial, Helvetica, sans-serif; margin: 3px 0 0 5px !important;">
+                PS </h3></a>
+        </div>
+    </div>
+    <div class="body gap-2 d-flex flex-column gap-2">
+        <div class="testata">
+            <div>
+                <h1>PIAZZE SICILIANE</h1>
+
+            </div>
+        </div>
+        <div class="d-flex gap-2 align-items-center justify-content-evenly flex-wrap">
+            <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(1)">
+
+                <div class="card">
+                    <div>
+                        <span>catania</span>
+                    </div>
+                    <img src="./immagini/catania.jpg" alt="catania">
+
+                </div>
+            </div>
+            <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(2)">
+                <div class="card">
+                    <div>
+                        <span>messina</span>
+                    </div>
+                    <img src="./immagini/messina.jpeg" alt="messina">
+
+                </div>
+            </div>
+            <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(3)">
+                <div class="card">
+                    <div>
+                        <span>palermo</span>
+                    </div>
+                    <img src="./immagini/palermo.jpg" alt="palermo">
+
+                </div>
+            </div>
+        </div>
+        <div class="d-flex gap-2 align-items-center justify-content-evenly flex-wrap">
+
+            <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(4)">
+                <div class="card">
+                    <div>
+                        <span>agrigento</span>
+                    </div>
+                    <img src="./immagini/agrigento.jpg" alt="agrigento">
+
+                </div>
+            </div>
+            <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(5)">
+                <div class="card">
+                    <div>
+                        <span>caltanissetta</span>
+                    </div>
+                    <img src="./immagini/Caltanissetta.jpg" alt="caltanissetta">
+
+                </div>
+            </div>
+            <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(6)">
+                <div class="card">
+                    <div>
+                        <span>enna</span>
+                    </div>
+                    <img src="./immagini/enna.jpg" alt="enna">
+
+                </div>
+            </div>
+        </div>
+        <div class="d-flex gap-2 align-items-center justify-content-evenly flex-wrap">
+
+            <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(7)">
+                <div class="card">
+                    <div>
+                        <span>ragusa</span>
+                    </div>
+                    <img src="./immagini/ragusa.jpg" alt="ragusa" >
+
+                </div>
+            </div>
+            <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(8)">
+                <div class="card">
+                    <div>
+                        <span>siracusa</span>
+                    </div>
+                    <img src="./immagini/siracusa.jpg" alt="siracusa">
+
+                </div>
+            </div>
+            <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(9)">
+                <div class="card">
+                    <div>
+                        <span>trapani</span>
+                    </div>
+                    <img src="./immagini/trapani.jpg" alt="trapani">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer w-100"></footer>
+</body>
+
+</html>
