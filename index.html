@@ -12,6 +12,12 @@
         .card {
             position: relative;
             cursor: pointer;
+            border: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
         }
 
         .card img,
@@ -19,9 +25,17 @@
 
             max-width: 200px;
 
+
+        }
+
+        .card img {
+            border-radius: 10px 10px 0 0;
+                aspect-ratio: 16 / 9;
+    overflow: hidden;
         }
 
         .card div {
+            border-radius: 10px 10px 0 0;
             position: absolute;
             top: 0;
             left: 50%;
@@ -37,21 +51,49 @@
             opacity: 0;
         }
 
-        button:has(>.card) {
+        div:has(>.card) {
             height: -webkit-fill-available;
+            /* border: 2px solid rgb(86, 14, 14); */
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            transform: translateY(0);
+            transition-duration: 0.5s;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 3px 3px #d5cfcf;
+            padding: 0 !important;
+            cursor: pointer;
 
 
         }
 
-        .card:hover div {
+        div:has(>.card):hover {
+            transform: translateY(-5px);
+            transition-duration: 0.5s;
+        }
+
+        div:hover>.card div {
             opacity: 1;
             transition-duration: 0.5s;
+
 
         }
 
         .card span {
             color: white;
             text-transform: capitalize;
+        }
+
+        .nomepiazza {
+            color: white;
+            background-color: #c22e2e;
+            padding: 0.25rem;
+            border-radius: 20px;
+            width: max-content;
         }
     </style>
     <link rel="stylesheet" href="./style/common.css">
@@ -90,22 +132,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-        <script>
-            function vaiAllaPiazza(piazzaId){
-                window.location.href="./piazza.html?provincia="+piazzaId
-            }
-        </script>
+    <script>
+        function vaiAllaPiazza(piazzaId) {
+            window.location.href = "./piazza.html?provincia=" + piazzaId
+        }
+    </script>
 </head>
 
 <body class="d-flex flex-column ">
     <div class="header">
         <div>
-           <a href="/progetto-piazze"> <h3 class="m-0 "
-                style="text-transform: uppercase; color:white; font-family: Arial, Helvetica, sans-serif; margin: 3px 0 0 5px !important;">
-                PS </h3></a>
+            <a href="/progetto-piazze">
+                <h3 class="m-0 "
+                    style="text-transform: uppercase; color:white; font-family: Arial, Helvetica, sans-serif; margin: 3px 0 0 5px !important;">
+                    PS </h3>
+            </a>
         </div>
     </div>
-    <div class="body gap-2 d-flex flex-column gap-2">
+    <div class="body gap-2 d-flex flex-column gap-2 mb-2">
         <div class="testata">
             <div>
                 <h1>PIAZZE SICILIANE</h1>
@@ -122,6 +166,10 @@
                     <img src="./immagini/catania.jpg" alt="catania">
 
                 </div>
+                 <div>
+
+                    <p class="nomepiazza">piazza duomo</p>
+                </div>
             </div>
             <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(2)">
                 <div class="card">
@@ -131,6 +179,10 @@
                     <img src="./immagini/messina.jpeg" alt="messina">
 
                 </div>
+                 <div>
+
+                    <p class="nomepiazza">piazza municipio</p>
+                </div>
             </div>
             <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(3)">
                 <div class="card">
@@ -139,6 +191,10 @@
                     </div>
                     <img src="./immagini/palermo.jpg" alt="palermo">
 
+                </div>
+                 <div>
+
+                    <p class="nomepiazza">piazza vittorio emanuele</p>
                 </div>
             </div>
         </div>
@@ -151,6 +207,12 @@
                     </div>
                     <img src="./immagini/agrigento.jpg" alt="agrigento">
 
+
+                </div>
+                
+                <div>
+
+                    <p class="nomepiazza">piazza chiesa madre</p>
                 </div>
             </div>
             <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(5)">
@@ -161,6 +223,10 @@
                     <img src="./immagini/Caltanissetta.jpg" alt="caltanissetta">
 
                 </div>
+                 <div>
+
+                    <p class="nomepiazza">piazza europa</p>
+                </div>
             </div>
             <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(6)">
                 <div class="card">
@@ -169,6 +235,10 @@
                     </div>
                     <img src="./immagini/enna.jpg" alt="enna">
 
+                </div>
+                 <div>
+
+                    <p class="nomepiazza">piazza degli eventi</p>
                 </div>
             </div>
         </div>
@@ -179,8 +249,12 @@
                     <div>
                         <span>ragusa</span>
                     </div>
-                    <img src="./immagini/ragusa.jpg" alt="ragusa" >
+                    <img src="./immagini/ragusa.jpg" alt="ragusa">
 
+                </div>
+                 <div>
+
+                    <p class="nomepiazza">piazza vittorio veneto</p>
                 </div>
             </div>
             <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(8)">
@@ -191,14 +265,23 @@
                     <img src="./immagini/siracusa.jpg" alt="siracusa">
 
                 </div>
+                 <div>
+
+                    <p class="nomepiazza">piazza aldo moro</p>
+                </div>
             </div>
             <div style="text-transform: capitalize;" class="p-2" onclick="vaiAllaPiazza(9)">
                 <div class="card">
                     <div>
                         <span>trapani</span>
                     </div>
+                    
                     <img src="./immagini/trapani.jpg" alt="trapani">
 
+                </div>
+                 <div>
+
+                    <p class="nomepiazza">piazza della loggia</p>
                 </div>
             </div>
         </div>
