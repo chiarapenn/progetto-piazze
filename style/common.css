@@ -21,3 +21,6 @@
         a{
             text-decoration-line: none;
         }
+        .body {
+            min-height: calc(100vh - 30px);
+        }
