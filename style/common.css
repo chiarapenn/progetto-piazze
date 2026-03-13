@@ -1,6 +1,6 @@
  .header {
             min-height: 30px;
-            background-color: rgb(86, 14, 14);
+            background: linear-gradient(90deg,#c22e2e, #f7f311);
             display: flex;
 
 
@@ -16,7 +16,7 @@
 
         .footer {
             height: 50px;
-            background-color: rgb(86, 14, 14);
+            background: linear-gradient(90deg, #c22e2e, #f7f311);
             
         }
         a{
