@@ -31,13 +31,15 @@
             font-size: clamp(1.1rem, 2vw, 2.3rem);
 
         }
+
         .chip {
             padding: 10px;
-    background-color: #c22e2e;
-    border-radius: 20px;
-    width: max-content;
-    color: white;
-}
+            background-color: #c22e2e;
+            border-radius: 20px;
+            width: max-content;
+            color: white;
+        }
+
         .container {
             background-color: #d3d3d3;
             padding: 5px;
@@ -65,32 +67,33 @@
         </div>
         <div class="container">
 
-    
-        <div class="row gap-2 m-2">
- <div class="col "><img id="piazza_img" alt=""
-                    style="max-height: 300px;"></div>
 
-           
-            <div class="col gap-2 d-flex flex-column">
-                <div>
+            <div class="row gap-2 m-2">
+                <div class="col "><img id="piazza_img" alt="" style="max-width: min (500px, 90vw);"
+                        src="./immagini/piazze/acireale.jpg"></div>
 
+
+                <div class="col gap-2 d-flex flex-column">
                     <div>
-                        <h3 class="chip">Dove mi trovo</h3>
-                    </div>
-                    <div class="bg-white border border-0 rounded  p-2"><span id="piazza_location" class="text-decoration-underline"></span></div>
-                </div>
-                <div >
 
-                    <div>
-                        <h3 class="chip">Storia</h3>
+                        <div>
+                            <h3 class="chip">Dove mi trovo</h3>
+                        </div>
+                        <div class="bg-white border border-0 rounded  p-2"><span id="piazza_location"
+                                class="text-decoration-underline"></span></div>
                     </div>
-                    <div class="bg-white border border-0 rounded  p-2">
-                        <p id="piazza_storia"></p>
+                    <div>
+
+                        <div>
+                            <h3 class="chip">Storia</h3>
+                        </div>
+                        <div class="bg-white border border-0 rounded  p-2">
+                            <p id="piazza_storia"></p>
+                        </div>
                     </div>
                 </div>
+
             </div>
-            
-        </div>
         </div>
     </div>
     <footer class="footer w-100"></footer>
