@@ -1,6 +1,6 @@
  .header {
             min-height: 30px;
-            background: linear-gradient(90deg,#c22e2e, #f7f311);
+            background: linear-gradient(90deg,#c22e2e, #7c2222);
             display: flex;
 
 
@@ -16,8 +16,15 @@
 
         .footer {
             height: 50px;
-            background: linear-gradient(90deg, #c22e2e, #f7f311);
+            background: linear-gradient(90deg, #c22e2e, #7c2222);
             
+        }
+         .chip {
+            padding: 5px;
+            background: linear-gradient(90deg, #c22e2e, #7c2222);
+            border-radius: 20px;
+            width: max-content;
+            color: white;
         }
         a{
             text-decoration-line: none;
